@@ -51,10 +51,10 @@ class ConsultasService {
   createFuncionario(pessoa: Pessoa) {
     return FuncionarioRepository.create(pessoa)
   }
-  editarPessoa(pessoa: Pessoa) {
-    //filteredPessoa: Pessoa;
 
-    //filteredPessoa = this.pessoas.find(p => p.id = pessoa.id)
+
+  editarPessoa(pessoa: Pessoa) {
+
   }
 
   getPessoaId(id: number) {

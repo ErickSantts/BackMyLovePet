@@ -2,7 +2,7 @@ import { Pessoa } from "../entities/pessoa.entity";
 import { Pet } from "../entities/pet.entity";
 
 export interface Consulta {
-    id: string,
+    id: number,
     nome: string,
     petId: Pet,
     donoId: Pessoa,

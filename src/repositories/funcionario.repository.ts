@@ -28,4 +28,10 @@ export class FuncionarioRepository {
             .getRepository(Consulta)
             .insert(consulta)
     }
+
+    static async createPet(pet: Pet){
+        return getConnection()
+        .getRepository(Pet)
+        .insert(pet)
+    }
 }

@@ -30,6 +30,11 @@ router.post('/nova/consulta', async (req: Request, res: Response) =>{
     res.status(201).send(generateMessage("Consulta realizada com sucesso!"))
 })
 
+router.post('/novo/pet', async (req: Request, res: Response) =>{
+    await FuncionarioRepository.createPet(req.body);
+    res.status(201).send(generateMessage("Pet inserido com sucesso!"))
+})
+
 
 
 

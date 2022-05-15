@@ -13,8 +13,8 @@ export class Pet{
     @Column({name: 'raca', type: 'varchar', length:20})
     raca?: String
 
-    @OneToOne(() => Pessoa)
-    @JoinColumn()
+    @OneToOne(() => Pessoa, { primary: true, cascade: true })
+    @JoinColumn({name:'dono_id'})
     dono?: Pessoa
 
     @Column({name: 'idade', type:'decimal'})

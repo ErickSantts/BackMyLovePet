@@ -30,5 +30,5 @@ export class Consulta {
 
     @OneToOne(() => Pessoa)
     @JoinColumn({name: 'veterinario_id'})
-    veterinarioId?: number
+    veterinarioId?: Pessoa
 }
