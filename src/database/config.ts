@@ -8,7 +8,7 @@ export const connection = createConnection({
     host: 'localhost',
     port: 5432,
     username: 'postgres',
-    password: 'dev@digigov@20',
+    password: 'senha',
     database: 'my_pet_lover_db',
     entities: [Pessoa, Consulta, Pet],
     //logging: true,
