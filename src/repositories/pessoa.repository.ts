@@ -29,21 +29,6 @@ export class PessoaRepository {
             )
     }
     static async getPessoaByConsulta(id: number) {
-        /* const entityManager = getManager();
-
-       async function returnId(){
-            return await await entityManager.query(`select c.dono_id  from Consulta c where c.id = ${id}`);
-        }
-
-        return await getConnection()
-            .getRepository(Pessoa)
-            .findOne(
-                {
-                    where: {
-                        id: await returnId
-                    }
-                }
-            ) */
 
         return await getConnection()
             .getRepository(Pessoa)
@@ -81,6 +66,18 @@ export class PessoaRepository {
     }
 
     static async getFuncionarioById(id: number) {
+        return getConnection()
+            .getRepository(Pessoa)
+            .findOne(
+                {
+                    where: {
+                        id: id
+                    }
+                }
+            )
+    }
+
+    static async getClienteById(id: number) {
         return getConnection()
             .getRepository(Pessoa)
             .findOne(

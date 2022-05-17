@@ -64,6 +64,11 @@ class ConsultasService {
   getPessoaByConsulta(id: number) {
     return PessoaRepository.getPessoaByConsulta(id)
   }
+
+  getClienteById(id: number) {
+    return PessoaRepository.getClienteById(id)
+  }
+
 }
 
 export default new ConsultasService;

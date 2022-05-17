@@ -1,5 +1,7 @@
+
 import { getConnection } from "typeorm";
 import { Consulta } from "../entities/consulta.entity";
+import { Pet } from "../entities/pet.entity";
 
 export class VeterinarioRepository {
 
@@ -9,5 +11,17 @@ export class VeterinarioRepository {
         .find({
            relations: ["veterinario_id"]
         })
+    }
+
+    static async getPetById(id: number){
+        return getConnection()
+            .getRepository(Pet)
+            .findOne(
+                {
+                    where: {
+                        id: id
+                    }
+                }
+            )
     }
 }

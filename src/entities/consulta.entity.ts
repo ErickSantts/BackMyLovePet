@@ -8,11 +8,11 @@ export class Consulta {
     @PrimaryGeneratedColumn({ name: 'id' })
     id?: number
 
-    @OneToOne(() => Pet)
+    @OneToOne(() => Pet, { eager:true })
     @JoinColumn({ name: 'pet_id' })
     pet?: Pet
 
-    @OneToOne(() => Pessoa)
+    @OneToOne(() => Pessoa, { eager:true })
     @JoinColumn({ name: 'dono_id' })
     dono?: Pessoa
 
@@ -28,7 +28,7 @@ export class Consulta {
     @Column({ name: 'detalhes', type: 'varchar', length: 1000 })
     detalhes?: String
 
-    @OneToOne(() => Pessoa)
+    @OneToOne(() => Pessoa, { eager:true })
     @JoinColumn({name: 'veterinario_id'})
     veterinarioId?: Pessoa
 }

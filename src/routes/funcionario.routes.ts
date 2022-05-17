@@ -20,6 +20,11 @@ router.get('/:id', async (req: Request, res: Response) =>{
     res.send(funcionario)
 })
 
+router.get('/cliente/:id', async (req: Request, res: Response) =>{
+    const cliente = await ConsultasService.getClienteById(parseInt(req.params.id))
+    res.send(cliente)
+})
+
 router.post('/novo', async (req: Request, res: Response) =>{
     await FuncionarioRepository.create(req.body);
     res.status(201).send(generateMessage("Funcionario inserido com sucesso!"))

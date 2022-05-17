@@ -4,8 +4,8 @@ import { Pet } from "../entities/pet.entity";
 export interface Consulta {
     id: number,
     nome: string,
-    petId: Pet,
-    donoId: Pessoa,
+    pet: Pet,
+    dono: Pessoa,
     raca: string,
     dataConsulta: Date,
     remedios: string,
